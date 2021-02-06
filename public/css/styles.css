@@ -30,3 +30,12 @@
     list-style-type: none;
     text-decoration: none;
 }
+
+.blog-text {
+    max-width: 70%;
+    overflow: hidden;
+}
+
+#more {
+    display: none;
+}
