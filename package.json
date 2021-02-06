@@ -1,0 +1,30 @@
+{
+  "name": "blogwebsite",
+  "version": "1.0.0",
+  "description": "Blog Website Challange",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaste111/BlogWebsite.git"
+  },
+  "keywords": [
+    "Blog",
+    "Website",
+    "Express"
+  ],
+  "author": "Jan Steimann",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaste111/BlogWebsite/issues"
+  },
+  "homepage": "https://github.com/jaste111/BlogWebsite#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1"
+  }
+}
