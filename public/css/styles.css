@@ -17,3 +17,16 @@
   width: 120px;
   word-spacing: 5px;
 }
+
+/* Main */
+
+.blog{
+    width: 80%;
+    margin: auto;
+    padding-top: 50px;
+}
+
+.nobull{
+    list-style-type: none;
+    text-decoration: none;
+}
