@@ -1,11 +1,19 @@
 /* Header */
 
 .header {
-    background-color: rgb(245, 236, 236);
-    height: 6rem;
+  background-color: rgb(245, 236, 236);
+  height: 6rem;
+  font-weight: 300;
+  text-transform: uppercase;
 }
 
 .header-name {
-    margin: auto;
-    margin-left: 150px;
+  margin: auto;
+  margin-left: 150px;
+  font-size: 1.6rem;
+}
+
+.nav-link {
+  width: 120px;
+  word-spacing: 5px;
 }
