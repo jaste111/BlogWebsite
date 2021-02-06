@@ -1,0 +1,11 @@
+/* Header */
+
+.header {
+    background-color: rgb(245, 236, 236);
+    height: 6rem;
+}
+
+.header-name {
+    margin: auto;
+    margin-left: 150px;
+}
