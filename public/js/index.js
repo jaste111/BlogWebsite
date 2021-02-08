@@ -1,5 +1,6 @@
 function readMore(button){
-    var buttonId = button.id;
-    $(".more_" + buttonId).toggleClass("hide");
-    $(".dots_"+ buttonId).toggleClass("hide");
+    let buttonClass = button.className;
+    let buttonId = buttonClass.split("-")[1];
+    $(".p_" + buttonId).toggleClass("hide");
+    $("."+buttonClass).toggleClass("hide-button");
 }
