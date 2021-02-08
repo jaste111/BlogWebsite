@@ -36,6 +36,6 @@
     overflow: hidden;
 }
 
-#more {
-    display: none;
+.hide {
+  display: none;
 }
