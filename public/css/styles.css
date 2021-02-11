@@ -20,22 +20,32 @@
 
 /* Main */
 
-.blog{
-    width: 80%;
-    margin: auto;
-    padding-top: 50px;
+.blog {
+  width: 80%;
+  margin: auto;
+  padding-top: 50px;
 }
 
-.nobull{
-    list-style-type: none;
-    text-decoration: none;
+.nobull {
+  list-style-type: none;
+  text-decoration: none;
 }
 
 .blog-text {
-    max-width: 70%;
-    overflow: hidden;
+  max-width: 70%;
 }
 
 .hide {
+  white-space: nowrap;
+  width: 70%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.hide-button {
   display: none;
+}
+
+.readMoreButton {
+  width: 200px;
 }
