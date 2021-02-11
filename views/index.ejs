@@ -53,12 +53,13 @@
 
         <li>
           <h1>Day <%= day %> </h1>
+          <div class="row">
           <p class="hide p_<%= day %> ">
             <%= text %>
-            
-            <a class="readLess-<%= day %>" href="#" onclick="readMore(this)">Read less</a>
+                        <a class="readLess-<%= day %>" href="#" onclick="readMore(this)">Read less</a>
           </p>
-          <a  class="readMore-<%= day %>" href="#" onclick="readMore(this)">Read more</a>
+          <a  class="readMoreButton readMore-<%= day %>" href="#" onclick="readMore(this)">Read more</a>
+        </div>
         </li>
       </ul>
     </div>

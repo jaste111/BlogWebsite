@@ -37,7 +37,7 @@
 
 .hide {
   white-space: nowrap;
-  width: 100px;
+  width: 70%;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -46,3 +46,6 @@
   display: none;
 }
 
+.readMoreButton {
+  width: 200px;
+}
