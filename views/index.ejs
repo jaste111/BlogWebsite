@@ -56,7 +56,7 @@
             <h1>Day <%= entries[i].day %> </h1>
         
             <div class="row">
-              <p class="hide p_<%= day %> ">
+              <p class="hide p_<%=entries[i].day %> ">
                 <%= entries[i].text %>
                 <a class="readLess-<%= entries[i].day %>" href="#" onclick="readMore(this)">Read less</a>
               </p>
