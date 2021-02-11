@@ -1,0 +1,10 @@
+<%- include('../header') %>
+
+<form action="/compose" method="post">
+    <div class="form-floating" id="blog-entry-input">
+        <textarea class="form-control" name="blogEntryText" placeholder="Leave your daily blog entry here"  style="height: 300px;"></textarea>
+        <button class="btn btn-light blog-input-button" type="submit">Submit</button>
+    </div>
+</form>
+
+<%- include('../footer') %>

@@ -49,3 +49,17 @@
 .readMoreButton {
   width: 200px;
 }
+
+
+/* Blog Entry Input */
+
+#blog-entry-input {
+  width: 50%;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.blog-input-button{
+  margin-top: 30px;
+  float: right;
+}
