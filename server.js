@@ -31,6 +31,10 @@ app.post("/compose", function(req, res){
   res.redirect("/");
 })
 
+app.get("/aboutus", function(req, res){
+  res.render("aboutUs");
+})
+
 app.listen(port, function () {
   console.log("Server is listening on port: " + port);
 });
