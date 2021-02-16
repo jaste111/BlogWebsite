@@ -1,7 +1,10 @@
 <%- include('../header') %>
 
 <form action="/compose" method="post">
-    <div class="form-floating" id="blog-entry-input">
+    <div class="form-floating " id="blog-entry-input">
+        <h5>Title:</h5>
+        <input type="text" id="title" class="form-control" name="title" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        <h5 style="padding-top: 5px;">Content:</h5>
         <textarea class="form-control" name="blogEntryText" placeholder="Leave your daily blog entry here"  style="height: 300px;"></textarea>
         <button class="btn btn-light blog-input-button" type="submit">Submit</button>
     </div>

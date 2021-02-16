@@ -39,7 +39,11 @@ app.get("/compose", function (req, res) {
 });
 
 app.post("/compose", function (req, res) {
+  var postTitle = req.body.title; 
   var inputText = req.body.blogEntryText;
+
+  console.log(postTitle);
+  
   var newEntry = { day: day++, text: inputText };
   entries = [...entries, newEntry];
   res.redirect("/");
