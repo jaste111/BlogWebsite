@@ -63,3 +63,8 @@
   margin-top: 30px;
   float: right;
 }
+
+#title {
+  padding-top: 0;
+  padding-bottom: 0;
+}
