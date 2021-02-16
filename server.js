@@ -7,7 +7,7 @@ const port = 3000;
 const app = express();
 
 // Connect to mongoDB database
-mongoose.connect("mongodb://localhost:27017/test", {
+mongoose.connect("mongodb://localhost:27017/Blog", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -62,10 +62,20 @@ app.post("/compose", function (req, res) {
   var postTitle = req.body.title;
   var inputText = req.body.blogEntryText;
 
-  console.log(postTitle);
+  Post.findOne({ title: postTitle }, function (err, post) {
+    if (!err) {
+      if (post) {
+        Post.updateOne({ title: postTitle }, { text: inputText });
+      } else {
+        const newPost = new Post({
+          title: postTitle,
+          text: inputText,
+        });
+        newPost.save();
+      }
+    }
+  });
 
-  var newEntry = { day: day++, text: inputText };
-  entries = [...entries, newEntry];
   res.redirect("/");
 });
 
