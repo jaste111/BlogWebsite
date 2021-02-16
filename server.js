@@ -12,6 +12,17 @@ mongoose.connect("mongodb://localhost:27017/test", {
   useUnifiedTopology: true,
 });
 
+
+
+// Create database Schemas
+const postSchema = mongoose.Schema({
+  title: String,
+  text: String
+});
+
+// Crteate mongoose model
+const Post = mongoose.model("Post", postSchema);
+
 const day1 = {
   day: 1,
   text:
