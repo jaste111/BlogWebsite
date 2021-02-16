@@ -12,6 +12,8 @@ mongoose.connect("mongodb://localhost:27017/Blog", {
   useUnifiedTopology: true,
 });
 
+mongoose.set("useFindAndModify", false);
+
 // Create database Schemas
 const postSchema = mongoose.Schema({
   title: String,
@@ -65,18 +67,27 @@ app.post("/compose", function (req, res) {
   Post.findOne({ title: postTitle }, function (err, post) {
     if (!err) {
       if (post) {
-        Post.updateOne({ title: postTitle }, { text: inputText });
+        Post.findOneAndUpdate(
+          { title: postTitle },
+          { text: inputText },
+          function (err, doc) {
+            if (!err) {
+              res.redirect("/");
+            } else {
+              console.log(err);
+            }
+          }
+        );
       } else {
         const newPost = new Post({
           title: postTitle,
           text: inputText,
         });
         newPost.save();
+        res.redirect("/");
       }
     }
   });
-
-  res.redirect("/");
 });
 
 app.get("/aboutus", function (req, res) {
