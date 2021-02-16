@@ -1,9 +1,16 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
+const mongoose = require("mongoose");
 
 const port = 3000;
 const app = express();
+
+// Connect to mongoDB database
+mongoose.connect("mongodb://localhost:27017/test", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
 const day1 = {
   day: 1,
@@ -39,11 +46,11 @@ app.get("/compose", function (req, res) {
 });
 
 app.post("/compose", function (req, res) {
-  var postTitle = req.body.title; 
+  var postTitle = req.body.title;
   var inputText = req.body.blogEntryText;
 
   console.log(postTitle);
-  
+
   var newEntry = { day: day++, text: inputText };
   entries = [...entries, newEntry];
   res.redirect("/");
