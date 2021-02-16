@@ -50,7 +50,6 @@
   width: 200px;
 }
 
-
 /* Blog Entry Input */
 
 #blog-entry-input {
@@ -59,7 +58,7 @@
   margin-top: 40px;
 }
 
-.blog-input-button{
+.blog-input-button {
   margin-top: 30px;
   float: right;
 }
