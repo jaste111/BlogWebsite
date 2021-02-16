@@ -60,7 +60,9 @@ app.get("/", function (req, res) {
           entries: [],
         });
       } else {
-        res.render("blog", { home: "Foo bar", entries: [] });
+        const home = posts.find(element => element.title === "home");
+        const blogPosts = posts.filter(element => element.title !== "home");
+        res.render("blog", { home: home.text, entries: blogPosts });
       }
     } else {
       console.log(err);
