@@ -13,14 +13,14 @@
 
       <% for(i = 0; i < entries.length; i++) { %>
         <li>
-          <h1>Day <%= entries[i].day %> </h1>
+          <h1><%= entries[i].title %> </h1>
       
           <div class="row">
-            <p class="hide p_<%=entries[i].day %> ">
+            <p class="hide p_<%=entries[i]._id %> ">
               <%= entries[i].text %>
-              <a class="readLess-<%= entries[i].day %>" href="#" onclick="readMore(this)">Read less</a>
+              <a class="readLess-<%= entries[i]._id %>" href="#" onclick="readMore(this)">Read less</a>
             </p>
-            <a  class="readMoreButton readMore-<%= entries[i].day %>" href="#" onclick="readMore(this)">Read more</a>
+            <a  class="readMoreButton readMore-<%= entries[i]._id %>" href="#" onclick="readMore(this)">Read more</a>
           </div>
       </li>
           <%}%>
