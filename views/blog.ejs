@@ -18,7 +18,7 @@
           <div class="row">
             <p class="hide p_<%=entries[i]._id %> ">
               <%= entries[i].text %>
-              <a class="readLess-<%= entries[i]._id %>" href="#" onclick="readMore(this)">Read less</a>
+              <a class="hide-button readLess-<%= entries[i]._id %>" href="#" onclick="readMore(this)">Read less</a>
             </p>
             <a  class="readMoreButton readMore-<%= entries[i]._id %>" href="#" onclick="readMore(this)">Read more</a>
           </div>
